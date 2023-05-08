@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kubernetes-django
-        image: avnshrai/django:v1
+        image: avnshrai/django:v2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8000

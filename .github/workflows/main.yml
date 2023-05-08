@@ -42,7 +42,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       - name: docker push
-        run: docker push avnshrai/django:v1
+        run: docker push avnshrai/django:v2
       # - name: Install Helm # helm installation in our runner for deploying.
       #   run: |
       #     curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
