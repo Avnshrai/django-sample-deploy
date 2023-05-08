@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     app: kubernetes-django
-  type: NodePort
+  type: LoadBalancer
   ports:
   - name: http
     port: 8000
