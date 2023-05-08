@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  health-check-job:
+  pre-setup-job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
