@@ -25,7 +25,7 @@ SECRET_KEY = 'PUT_SOME_REAL_SECRET_KEY_HERE'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'aeaee87b7b5c14f02ab37e3e6a795504-2104962819.ap-south-1.elb.amazonaws.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'aeaee87b7b5c14f02ab37e3e6a795504-763699923.ap-south-1.elb.amazonaws.com']
 
 
 # Application definition
