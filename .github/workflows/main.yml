@@ -49,7 +49,7 @@ jobs:
       #     aws configure set region $EKS_REGION
       #     aws sts get-caller-identity
       - name: Connect to EKS cluster 
-        run: aws eks update-kubeconfig --name $EKS_CLUSTER --region $aws-region
+        run: aws eks update-kubeconfig --name ArgoCD
         # run: aws eks --region $EKS_REGION update-kubeconfig --name $EKS_CLUSTER
       - name: Deploy on argocd
         run: kubectl apply -f argo.yaml
