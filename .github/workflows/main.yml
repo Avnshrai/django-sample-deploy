@@ -54,16 +54,16 @@ jobs:
       - name: setup argocli
         run: |
              curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v2.12.13/argo-linux-amd64.gz
-             apt install gzip
-             gzip argo-linux-amd64.gz
-             chmod +x argo-linux-amd64
+             sudo apt install gzip
+             sudo gzip argo-linux-amd64.gz
+             sudo chmod +x argo-linux-amd64
              sudo mv ./argo-linux-amd64 /usr/local/bin/argo
              argo version --short
       - name: sign in into ARGOCD
-        run: argocd login $(kubectl get service argocd-server -n argocd --output=jsonpath='{.status.loadBalancer.ingress[0].hostname}') --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo) --insecure
-      - name: create a app
-        run: argocd app create django --repo https://github.com/Avnshrai/django-sample-deploy.git --path ./ --dest-server https://kubernetes.default.svc --dest-namespace django
+        run: sudo argocd login $(kubectl get service argocd-server -n argocd --output=jsonpath='{.status.loadBalancer.ingress[0].hostname}') --username admin --password $(kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d; echo) --insecure
+      - name: create a apps
+        run: sudo argocd app create django --repo https://github.com/Avnshrai/django-sample-deploy.git --path ./ --dest-server https://kubernetes.default.svc --dest-namespace django
       - name: Deploy on argocd
-        run: kubectl apply -f argo.yaml
+        run: sudo kubectl apply -f argo.yaml
       
       
