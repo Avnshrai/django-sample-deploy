@@ -54,7 +54,7 @@ jobs:
       - name: setup argocli
         run: |
              curl -sLO https://github.com/argoproj/argo-workflows/releases/download/v2.12.13/argo-linux-amd64.gz
-             sleep 60
+             sleep 1m
              sudo apt install gzip
              sudo gzip argo-linux-amd64.gz
              sudo chmod +x argo-linux-amd64
